@@ -101,19 +101,103 @@ a {
   position: relative;
 }
 
-.hero img {
+.hero-palette {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(244, 181, 68, 0.92) 0 12%, transparent 29%),
+    radial-gradient(circle at 68% 18%, rgba(58, 176, 198, 0.82) 0 11%, transparent 27%),
+    radial-gradient(circle at 76% 76%, rgba(190, 66, 58, 0.84) 0 13%, transparent 31%),
+    linear-gradient(135deg, #111512 0%, #223a32 32%, #c9b783 63%, #e8dfcb 100%);
   height: 100%;
   inset: 0;
-  object-fit: cover;
-  object-position: center;
   position: absolute;
   width: 100%;
 }
 
+.hero-palette::before,
+.hero-palette::after,
+.palette-field {
+  border-radius: 999px;
+  filter: blur(22px);
+  position: absolute;
+}
+
+.hero-palette::before {
+  background: rgba(245, 236, 211, 0.48);
+  content: "";
+  height: 58vw;
+  max-height: 720px;
+  min-height: 340px;
+  right: -12vw;
+  top: -16vw;
+  transform: rotate(-22deg);
+  width: 62vw;
+}
+
+.hero-palette::after {
+  background: rgba(7, 12, 13, 0.5);
+  bottom: -28vw;
+  content: "";
+  height: 48vw;
+  left: 18vw;
+  min-height: 280px;
+  transform: rotate(12deg);
+  width: 72vw;
+}
+
+.palette-field {
+  display: block;
+  mix-blend-mode: screen;
+  opacity: 0.86;
+}
+
+.palette-field-ember {
+  background: #d94e3f;
+  height: 42vw;
+  left: 42vw;
+  max-height: 540px;
+  min-height: 260px;
+  top: 26vh;
+  transform: rotate(20deg);
+  width: 28vw;
+}
+
+.palette-field-sage {
+  background: #90a967;
+  height: 34vw;
+  left: 8vw;
+  max-height: 420px;
+  min-height: 220px;
+  top: 42vh;
+  transform: rotate(-15deg);
+  width: 38vw;
+}
+
+.palette-field-sky {
+  background: #35a7bd;
+  height: 26vw;
+  max-height: 340px;
+  min-height: 180px;
+  right: 8vw;
+  top: 18vh;
+  transform: rotate(31deg);
+  width: 34vw;
+}
+
+.palette-field-ink {
+  background: #182824;
+  bottom: 4vh;
+  height: 34vw;
+  max-height: 460px;
+  min-height: 240px;
+  right: 24vw;
+  transform: rotate(-8deg);
+  width: 42vw;
+}
+
 .hero-shade {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0.48) 38%, rgba(0, 0, 0, 0.08) 75%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.14) 45%, rgba(0, 0, 0, 0.72));
+    linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.56) 39%, rgba(0, 0, 0, 0.18) 74%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.1) 44%, rgba(0, 0, 0, 0.76));
   inset: 0;
   position: absolute;
 }
